@@ -9,7 +9,6 @@ class SearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-
       controller: searchController,
       decoration: InputDecoration(
         hintText: "what do you search for?",

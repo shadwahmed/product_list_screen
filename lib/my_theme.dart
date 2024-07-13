@@ -8,20 +8,28 @@ class MyThemeData {
   static ThemeData lightTheme = ThemeData(
     textTheme: TextTheme(
         bodyLarge: GoogleFonts.poppins(
-          color: primaryColor,
+          color: Color.fromRGBO(6, 0, 79, 1),
           fontWeight: FontWeight.w400,
-          fontSize: 14.sp,
+          fontSize: 11.sp,
         ),
         bodyMedium: GoogleFonts.poppins(
           color: primaryColor,
           fontWeight: FontWeight.w400,
-          fontSize: 12.sp,
+          fontSize: 11.sp,
         ),
         bodySmall: GoogleFonts.poppins(
           color: primaryColor,
           fontWeight: FontWeight.w400,
-          fontSize: 11.sp,
+          fontSize: 10.sp,
         )),
     brightness: Brightness.light,
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: primaryColor,
+        type: BottomNavigationBarType.fixed,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        unselectedItemColor: Colors.white,
+        selectedItemColor: Colors.black87,
+      )
   );
 }
