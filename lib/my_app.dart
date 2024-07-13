@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:product_list_screen/home_screen.dart';
 
 import 'product_tab.dart';
 
@@ -14,8 +15,9 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: ProductTab.routeName,
+        initialRoute: HomeScreen.routeName,
         routes: {
+          HomeScreen.routeName: (context) => HomeScreen(),
           ProductTab.routeName: (context) => ProductTab(),
         },
       ),

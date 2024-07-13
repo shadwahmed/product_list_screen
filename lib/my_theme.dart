@@ -23,13 +23,5 @@ class MyThemeData {
           fontSize: 10.sp,
         )),
     brightness: Brightness.light,
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        backgroundColor: primaryColor,
-        type: BottomNavigationBarType.fixed,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        unselectedItemColor: Colors.white,
-        selectedItemColor: Colors.black87,
-      )
   );
 }

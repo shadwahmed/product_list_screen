@@ -7,8 +7,9 @@ import 'package:product_list_screen/search_bar_with_cart.dart';
 
 class ProductTab extends StatelessWidget {
   static const String routeName = "productTab";
-   int index=0;
-   ProductTab({super.key});
+  int index = 0;
+
+  ProductTab({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,11 +50,6 @@ class ProductTab extends StatelessWidget {
             ),
           ],
         ),
-
-
-
-
-
       ),
     );
   }
