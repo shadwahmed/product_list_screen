@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:product_list_screen/account_tab.dart';
-import 'package:product_list_screen/home_tab.dart';
-import 'package:product_list_screen/nav_bar_icon.dart';
-import 'package:product_list_screen/product_tab.dart';
-import 'package:product_list_screen/wishlist_tab.dart';
+import 'package:product_list_screen/tabs/account_tab.dart';
+import 'package:product_list_screen/features/products/presentation/widgets/product_tab.dart';
+import 'package:product_list_screen/tabs/home_tab.dart';
+import 'package:product_list_screen/tabs/wishlist_tab.dart';
+
+import 'nav_bar_icon.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:product_list_screen/features/products/presentation/widgets/product_tab.dart';
 import 'package:product_list_screen/home_screen.dart';
 
-import 'product_tab.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

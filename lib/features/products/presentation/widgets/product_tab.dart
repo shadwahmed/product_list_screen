@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:product_list_screen/product_item.dart';
-import 'package:product_list_screen/search_bar_with_cart.dart';
+import 'package:product_list_screen/features/products/presentation/widgets/product_item.dart';
+import 'package:product_list_screen/features/products/presentation/widgets/search_bar_with_cart.dart';
 
 class ProductTab extends StatelessWidget {
   static const String routeName = "productTab";
