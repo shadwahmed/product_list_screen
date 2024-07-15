@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
 
-class Product extends Equatable{
+class Product extends Equatable {
+  String coverImageUrl;
   int sold;
   List<String> images;
   int ratingsQuantity;
@@ -13,6 +14,7 @@ class Product extends Equatable{
   Product(
       {required this.sold,
       required this.images,
+      required this.coverImageUrl,
       required this.ratingsQuantity,
       required this.id,
       required this.title,

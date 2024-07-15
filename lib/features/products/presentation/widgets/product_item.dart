@@ -2,9 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:product_list_screen/features/products/domain/entities/product.dart';
 
 class ProductItem extends StatelessWidget {
-  const ProductItem({super.key});
+  const ProductItem(this.product);
+
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +23,12 @@ class ProductItem extends StatelessWidget {
           Stack(
             children: [
               ClipRRect(
-                  child: Image.asset(
-                "assets/images/product_ph.png",
+                borderRadius: BorderRadius.circular(15.r),
+                  child: Image.network(
+                product.coverImageUrl,
                 height: 125.h,
                 width: 191.w,
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
               )),
               Positioned(
                 top: 4.h,
@@ -47,7 +51,7 @@ class ProductItem extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 3, left: 7),
             child: Text(
-              "Nike Air Jordon Nike shoes flexible for wo..",
+              product.title,
               style: Theme.of(context).textTheme.bodyLarge,
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
@@ -58,7 +62,7 @@ class ProductItem extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 3, left: 7),
                 child: Text(
-                  "EGP 1,200 ",
+                  "EGP ${product.price}",
                   style: Theme.of(context).textTheme.bodyLarge,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
@@ -83,7 +87,7 @@ class ProductItem extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 3, left: 7),
                 child: Text(
-                  "Review (4.6)",
+                  "Review (${product.ratingsAverage})",
                   style: Theme.of(context).textTheme.bodySmall,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,

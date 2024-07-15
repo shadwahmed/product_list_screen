@@ -7,16 +7,23 @@ import 'package:product_list_screen/features/products/data/models/ProductRespons
 
 @LazySingleton(as: ProductsRemoteDataSources)
 class ProductsApiRemoteDataSource implements ProductsRemoteDataSources {
-  final Dio _dio;
-
-  ProductsApiRemoteDataSource(this._dio);
+  final _dio = Dio(
+    BaseOptions(
+      baseUrl: APIConstants.baseURL,
+    )
+  );
+  // final Dio _dio;
+  //
+  // ProductsApiRemoteDataSource(this._dio);
 
   @override
   Future<ProductResponse> getProducts() async {
     try {
       final response = await _dio.get(APIConstants.productsEndpoint);
       return ProductResponse.fromJson(response.data);
-    } catch (_) {
+    } catch (e) {
+      print("==============================");
+      print(e);
       throw const RemoteException("Failed to get products");
     }
   }

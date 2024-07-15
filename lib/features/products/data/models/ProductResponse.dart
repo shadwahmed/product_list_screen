@@ -26,13 +26,13 @@ class ProductModel extends Product {
     required super.images,
     required super.ratingsQuantity,
     required super.id,
+    required super.coverImageUrl,
     required super.title,
     required super.description,
     required super.price,
     required super.ratingsAverage,
     this.slug,
     this.quantity,
-    this.imageCover,
     this.category,
     this.brand,
     this.createdAt,
@@ -41,7 +41,6 @@ class ProductModel extends Product {
 
   String? slug;
   int? quantity;
-  String? imageCover;
   Category? category;
   Brand? brand;
   String? createdAt;
@@ -56,10 +55,10 @@ class ProductModel extends Product {
       title: json['title'],
       description: json['description'],
       price: json['price'],
-      ratingsAverage: json['ratingsAverage'],
+      ratingsAverage: (json['ratingsAverage'] as num).toDouble(),
       slug: json['slug'],
       quantity: json['quantity'],
-      imageCover: json['imageCover'],
+      coverImageUrl: json['imageCover'],
       category:
           json['category'] != null ? Category.fromJson(json['category']) : null,
       brand: json['brand'] != null ? Brand.fromJson(json['brand']) : null,
